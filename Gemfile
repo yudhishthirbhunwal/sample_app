@@ -32,6 +32,7 @@ gem 'faker', '~> 2.11.0'
 gem 'will_paginate', '~> 3.3.0'
 gem 'bootstrap-will_paginate', '~> 1.0.0'
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'rexml', '~> 3.2', '>= 3.2.5' 
 
 group :development, :test do
 # Use sqlite3 as the database for Active Record
