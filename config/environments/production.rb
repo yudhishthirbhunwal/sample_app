@@ -71,13 +71,13 @@ Rails.application.configure do
   host = 'fierce-fortress-22209.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   config.action_mailer.smtp_settings = {
-  :address => 'smtp.gmail.com',
-  :port => '587',
-  :authentication => :plain,
-  :user_name => Rails.application.credentials.gmail['GMAIL_USERNAME'],
-  :password => Rails.application.credentials.gmail['GMAIL_PASSWORD'],
-  :domain => 'gmail.com',
-  :enable_starttls_auto => true
+  address: 'smtp.gmail.com',
+  port: 587,
+  authentication: :plain,
+  user_name: Rails.application.credentials.gmail[:GMAIL_USERNAME],
+  password: Rails.application.credentials.gmail[:GMAIL_PASSWORD],
+  domain: 'gmail.com',
+  enable_starttls_auto: true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
