@@ -66,7 +66,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = 'fierce-fortress-22209.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
@@ -74,8 +74,8 @@ Rails.application.configure do
   :address => 'smtp.gmail.com',
   :port => '587',
   :authentication => :plain,
-  :user_name => ENV['GMAIL_USERNAME'],
-  :password => ENV['GMAIL_PASSWORD'],
+  :user_name => Rails.application.credentials.gmail['GMAIL_USERNAME'],
+  :password => Rails.application.credentials.gmail['GMAIL_PASSWORD'],
   :domain => 'gmail.com',
   :enable_starttls_auto => true
   }
